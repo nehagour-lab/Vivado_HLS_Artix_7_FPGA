@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2017.2 (64-bit)
+# SW Build 1909853 on Thu Jun 15 18:39:10 MDT 2017
+# IP Build 1909766 on Thu Jun 15 19:58:00 MDT 2017
+# Start of session at: Fri Mar  9 16:57:29 2018
+# Process ID: 30614
+# Current directory: /opt/Xilinx/Vivado/2017.2/bin/UNROLL_FLOAT_9_MARCH_NEW_1_2_1/UNROLL_FLOAT_9_MARCH_NEW_1_2_1.runs/impl_2
+# Command line: vivado -log design_1_wrapper.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source design_1_wrapper.tcl -notrace
+# Log file: /opt/Xilinx/Vivado/2017.2/bin/UNROLL_FLOAT_9_MARCH_NEW_1_2_1/UNROLL_FLOAT_9_MARCH_NEW_1_2_1.runs/impl_2/design_1_wrapper.vdi
+# Journal file: /opt/Xilinx/Vivado/2017.2/bin/UNROLL_FLOAT_9_MARCH_NEW_1_2_1/UNROLL_FLOAT_9_MARCH_NEW_1_2_1.runs/impl_2/vivado.jou
+#-----------------------------------------------------------
+source design_1_wrapper.tcl -notrace

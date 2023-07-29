@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<vivadoHLSLog:LogRoot xmlns:vivadoHLSLog="www.xilinx.com/vivadoHLSLog">
+  <errorLogs>
+    <logs>
+      <synLog/>
+      <simLog/>
+      <mgLog/>
+      <packageLog/>
+      <csimLog/>
+    </logs>
+  </errorLogs>
+  <warningLogs>
+    <logs>
+      <synLog>
+        <logs message="WARNING: [HLS 200-40] Cannot find library 'xilinx/null/null'." projectName="unroll_float_8_march" solutionName="solution2" date="2018-03-09T18:25:34.602+0530" type="Warning"/>
+        <logs message="WARNING: [HLS 200-40] Cannot find library '/opt/Xilinx/Vivado_HLS/2017.2/common/technology/xilinx/null/null.lib'." projectName="unroll_float_8_march" solutionName="solution2" date="2018-03-09T18:25:33.220+0530" type="Warning"/>
+      </synLog>
+      <simLog/>
+      <mgLog/>
+      <packageLog/>
+      <csimLog/>
+    </logs>
+  </warningLogs>
+</vivadoHLSLog:LogRoot>

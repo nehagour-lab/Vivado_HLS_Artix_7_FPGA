@@ -1,0 +1,13 @@
+#-----------------------------------------------------------
+# xsim v2017.2 (64-bit)
+# SW Build 1909853 on Thu Jun 15 18:39:10 MDT 2017
+# IP Build 1909766 on Thu Jun 15 19:58:00 MDT 2017
+# Start of session at: Thu Mar  8 11:51:49 2018
+# Process ID: 12415
+# Current directory: /opt/Xilinx/Vivado_HLS/2017.2/bin/sequence_1_8_march/solution1/sim/vhdl
+# Command line: xsim -mode tcl -source {xsim.dir/simple/xsim_script.tcl}
+# Log file: /opt/Xilinx/Vivado_HLS/2017.2/bin/sequence_1_8_march/solution1/sim/vhdl/xsim.log
+# Journal file: /opt/Xilinx/Vivado_HLS/2017.2/bin/sequence_1_8_march/solution1/sim/vhdl/xsim.jou
+#-----------------------------------------------------------
+source xsim.dir/simple/xsim_script.tcl
+source simple.tcl

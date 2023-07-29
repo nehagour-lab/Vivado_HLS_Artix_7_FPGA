@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<autopilotfilemapping:AutoPilotFileMapping xmlns:autopilotfilemapping="www.autoesl.com/autopilotfilemapping">
+  <source>
+    <originFiles name="MAT_PIPELINE_2.cpp" path="/home/drsatya/Desktop/lab1/MAT_PIPELINE_2.cpp"/>
+    <originFiles name="matrixmul.h" path="/home/drsatya/Desktop/lab1/matrixmul.h"/>
+  </source>
+  <testbench>
+    <originFiles name="matrixmul_test.cpp" path="/home/drsatya/Desktop/lab1/matrixmul_test.cpp"/>
+  </testbench>
+</autopilotfilemapping:AutoPilotFileMapping>

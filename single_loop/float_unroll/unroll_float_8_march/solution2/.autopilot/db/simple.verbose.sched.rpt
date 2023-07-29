@@ -1,0 +1,380 @@
+
+
+================================================================
+== Vivado HLS Report for 'simple'
+================================================================
+* Date:           Fri Mar  9 18:25:42 2018
+
+* Version:        2017.2 (Build 1909853 on Thu Jun 15 18:55:24 MDT 2017)
+* Project:        unroll_float_8_march
+* Solution:       solution2
+* Product family: kintexu
+* Target device:  xcku035-ffva1156-3-e
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing (ns): 
+    * Summary: 
+    +--------+-------+----------+------------+
+    |  Clock | Target| Estimated| Uncertainty|
+    +--------+-------+----------+------------+
+    |ap_clk  |  10.00|      5.71|        1.25|
+    +--------+-------+----------+------------+
+
++ Latency (clock cycles): 
+    * Summary: 
+    +-----+-----+-----+-----+---------+
+    |  Latency  |  Interval | Pipeline|
+    | min | max | min | max |   Type  |
+    +-----+-----+-----+-----+---------+
+    |    3|    3|    4|    4|   none  |
+    +-----+-----+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        N/A
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 1
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states: 4
+* Pipeline: 0
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 
+	2  / true
+2 --> 
+	3  / true
+3 --> 
+	4  / true
+4 --> 
+* FSM state operations: 
+
+ <State 1>: 5.71ns
+ST_1: a_0_read (51)  [1/1] 0.00ns  loc: ../../../../../home/drsatya/neha/add.c:14
+:26  %a_0_read = call float @_ssdm_op_Read.ap_auto.floatP(float* %a_0)
+
+ST_1: b_0_read (52)  [1/1] 0.00ns  loc: ../../../../../home/drsatya/neha/add.c:14
+:27  %b_0_read = call float @_ssdm_op_Read.ap_auto.floatP(float* %b_0)
+
+ST_1: tmp_1 (53)  [4/4] 5.71ns  loc: ../../../../../home/drsatya/neha/add.c:14
+:28  %tmp_1 = fadd float %a_0_read, %b_0_read
+
+ST_1: a_1_read (55)  [1/1] 0.00ns  loc: ../../../../../home/drsatya/neha/add.c:14
+:30  %a_1_read = call float @_ssdm_op_Read.ap_auto.floatP(float* %a_1)
+
+ST_1: b_1_read (56)  [1/1] 0.00ns  loc: ../../../../../home/drsatya/neha/add.c:14
+:31  %b_1_read = call float @_ssdm_op_Read.ap_auto.floatP(float* %b_1)
+
+ST_1: tmp_1_1 (57)  [4/4] 5.71ns  loc: ../../../../../home/drsatya/neha/add.c:14
+:32  %tmp_1_1 = fadd float %a_1_read, %b_1_read
+
+ST_1: a_2_read (59)  [1/1] 0.00ns  loc: ../../../../../home/drsatya/neha/add.c:14
+:34  %a_2_read = call float @_ssdm_op_Read.ap_auto.floatP(float* %a_2)
+
+ST_1: b_2_read (60)  [1/1] 0.00ns  loc: ../../../../../home/drsatya/neha/add.c:14
+:35  %b_2_read = call float @_ssdm_op_Read.ap_auto.floatP(float* %b_2)
+
+ST_1: tmp_1_2 (61)  [4/4] 5.71ns  loc: ../../../../../home/drsatya/neha/add.c:14
+:36  %tmp_1_2 = fadd float %a_2_read, %b_2_read
+
+ST_1: a_3_read (63)  [1/1] 0.00ns  loc: ../../../../../home/drsatya/neha/add.c:14
+:38  %a_3_read = call float @_ssdm_op_Read.ap_auto.floatP(float* %a_3)
+
+ST_1: b_3_read (64)  [1/1] 0.00ns  loc: ../../../../../home/drsatya/neha/add.c:14
+:39  %b_3_read = call float @_ssdm_op_Read.ap_auto.floatP(float* %b_3)
+
+ST_1: tmp_1_3 (65)  [4/4] 5.71ns  loc: ../../../../../home/drsatya/neha/add.c:14
+:40  %tmp_1_3 = fadd float %a_3_read, %b_3_read
+
+ST_1: a_4_read (67)  [1/1] 0.00ns  loc: ../../../../../home/drsatya/neha/add.c:14
+:42  %a_4_read = call float @_ssdm_op_Read.ap_auto.floatP(float* %a_4)
+
+ST_1: b_4_read (68)  [1/1] 0.00ns  loc: ../../../../../home/drsatya/neha/add.c:14
+:43  %b_4_read = call float @_ssdm_op_Read.ap_auto.floatP(float* %b_4)
+
+ST_1: tmp_1_4 (69)  [4/4] 5.71ns  loc: ../../../../../home/drsatya/neha/add.c:14
+:44  %tmp_1_4 = fadd float %a_4_read, %b_4_read
+
+ST_1: a_5_read (71)  [1/1] 0.00ns  loc: ../../../../../home/drsatya/neha/add.c:14
+:46  %a_5_read = call float @_ssdm_op_Read.ap_auto.floatP(float* %a_5)
+
+ST_1: b_5_read (72)  [1/1] 0.00ns  loc: ../../../../../home/drsatya/neha/add.c:14
+:47  %b_5_read = call float @_ssdm_op_Read.ap_auto.floatP(float* %b_5)
+
+ST_1: tmp_1_5 (73)  [4/4] 5.71ns  loc: ../../../../../home/drsatya/neha/add.c:14
+:48  %tmp_1_5 = fadd float %a_5_read, %b_5_read
+
+ST_1: a_6_read (75)  [1/1] 0.00ns  loc: ../../../../../home/drsatya/neha/add.c:14
+:50  %a_6_read = call float @_ssdm_op_Read.ap_auto.floatP(float* %a_6)
+
+ST_1: b_6_read (76)  [1/1] 0.00ns  loc: ../../../../../home/drsatya/neha/add.c:14
+:51  %b_6_read = call float @_ssdm_op_Read.ap_auto.floatP(float* %b_6)
+
+ST_1: tmp_1_6 (77)  [4/4] 5.71ns  loc: ../../../../../home/drsatya/neha/add.c:14
+:52  %tmp_1_6 = fadd float %a_6_read, %b_6_read
+
+ST_1: a_7_read (79)  [1/1] 0.00ns  loc: ../../../../../home/drsatya/neha/add.c:14
+:54  %a_7_read = call float @_ssdm_op_Read.ap_auto.floatP(float* %a_7)
+
+ST_1: b_7_read (80)  [1/1] 0.00ns  loc: ../../../../../home/drsatya/neha/add.c:14
+:55  %b_7_read = call float @_ssdm_op_Read.ap_auto.floatP(float* %b_7)
+
+ST_1: tmp_1_7 (81)  [4/4] 5.71ns  loc: ../../../../../home/drsatya/neha/add.c:14
+:56  %tmp_1_7 = fadd float %a_7_read, %b_7_read
+
+
+ <State 2>: 5.71ns
+ST_2: tmp_1 (53)  [3/4] 5.71ns  loc: ../../../../../home/drsatya/neha/add.c:14
+:28  %tmp_1 = fadd float %a_0_read, %b_0_read
+
+ST_2: tmp_1_1 (57)  [3/4] 5.71ns  loc: ../../../../../home/drsatya/neha/add.c:14
+:32  %tmp_1_1 = fadd float %a_1_read, %b_1_read
+
+ST_2: tmp_1_2 (61)  [3/4] 5.71ns  loc: ../../../../../home/drsatya/neha/add.c:14
+:36  %tmp_1_2 = fadd float %a_2_read, %b_2_read
+
+ST_2: tmp_1_3 (65)  [3/4] 5.71ns  loc: ../../../../../home/drsatya/neha/add.c:14
+:40  %tmp_1_3 = fadd float %a_3_read, %b_3_read
+
+ST_2: tmp_1_4 (69)  [3/4] 5.71ns  loc: ../../../../../home/drsatya/neha/add.c:14
+:44  %tmp_1_4 = fadd float %a_4_read, %b_4_read
+
+ST_2: tmp_1_5 (73)  [3/4] 5.71ns  loc: ../../../../../home/drsatya/neha/add.c:14
+:48  %tmp_1_5 = fadd float %a_5_read, %b_5_read
+
+ST_2: tmp_1_6 (77)  [3/4] 5.71ns  loc: ../../../../../home/drsatya/neha/add.c:14
+:52  %tmp_1_6 = fadd float %a_6_read, %b_6_read
+
+ST_2: tmp_1_7 (81)  [3/4] 5.71ns  loc: ../../../../../home/drsatya/neha/add.c:14
+:56  %tmp_1_7 = fadd float %a_7_read, %b_7_read
+
+
+ <State 3>: 5.71ns
+ST_3: tmp_1 (53)  [2/4] 5.71ns  loc: ../../../../../home/drsatya/neha/add.c:14
+:28  %tmp_1 = fadd float %a_0_read, %b_0_read
+
+ST_3: tmp_1_1 (57)  [2/4] 5.71ns  loc: ../../../../../home/drsatya/neha/add.c:14
+:32  %tmp_1_1 = fadd float %a_1_read, %b_1_read
+
+ST_3: tmp_1_2 (61)  [2/4] 5.71ns  loc: ../../../../../home/drsatya/neha/add.c:14
+:36  %tmp_1_2 = fadd float %a_2_read, %b_2_read
+
+ST_3: tmp_1_3 (65)  [2/4] 5.71ns  loc: ../../../../../home/drsatya/neha/add.c:14
+:40  %tmp_1_3 = fadd float %a_3_read, %b_3_read
+
+ST_3: tmp_1_4 (69)  [2/4] 5.71ns  loc: ../../../../../home/drsatya/neha/add.c:14
+:44  %tmp_1_4 = fadd float %a_4_read, %b_4_read
+
+ST_3: tmp_1_5 (73)  [2/4] 5.71ns  loc: ../../../../../home/drsatya/neha/add.c:14
+:48  %tmp_1_5 = fadd float %a_5_read, %b_5_read
+
+ST_3: tmp_1_6 (77)  [2/4] 5.71ns  loc: ../../../../../home/drsatya/neha/add.c:14
+:52  %tmp_1_6 = fadd float %a_6_read, %b_6_read
+
+ST_3: tmp_1_7 (81)  [2/4] 5.71ns  loc: ../../../../../home/drsatya/neha/add.c:14
+:56  %tmp_1_7 = fadd float %a_7_read, %b_7_read
+
+
+ <State 4>: 5.71ns
+ST_4: StgValue_45 (25)  [1/1] 0.00ns
+:0  call void (...)* @_ssdm_op_SpecBitsMap(float* %c_7), !map !7
+
+ST_4: StgValue_46 (26)  [1/1] 0.00ns
+:1  call void (...)* @_ssdm_op_SpecBitsMap(float* %c_6), !map !13
+
+ST_4: StgValue_47 (27)  [1/1] 0.00ns
+:2  call void (...)* @_ssdm_op_SpecBitsMap(float* %c_5), !map !19
+
+ST_4: StgValue_48 (28)  [1/1] 0.00ns
+:3  call void (...)* @_ssdm_op_SpecBitsMap(float* %c_4), !map !25
+
+ST_4: StgValue_49 (29)  [1/1] 0.00ns
+:4  call void (...)* @_ssdm_op_SpecBitsMap(float* %c_3), !map !31
+
+ST_4: StgValue_50 (30)  [1/1] 0.00ns
+:5  call void (...)* @_ssdm_op_SpecBitsMap(float* %c_2), !map !37
+
+ST_4: StgValue_51 (31)  [1/1] 0.00ns
+:6  call void (...)* @_ssdm_op_SpecBitsMap(float* %c_1), !map !43
+
+ST_4: StgValue_52 (32)  [1/1] 0.00ns
+:7  call void (...)* @_ssdm_op_SpecBitsMap(float* %c_0), !map !49
+
+ST_4: StgValue_53 (33)  [1/1] 0.00ns
+:8  call void (...)* @_ssdm_op_SpecBitsMap(float* %b_7), !map !55
+
+ST_4: StgValue_54 (34)  [1/1] 0.00ns
+:9  call void (...)* @_ssdm_op_SpecBitsMap(float* %b_6), !map !59
+
+ST_4: StgValue_55 (35)  [1/1] 0.00ns
+:10  call void (...)* @_ssdm_op_SpecBitsMap(float* %b_5), !map !63
+
+ST_4: StgValue_56 (36)  [1/1] 0.00ns
+:11  call void (...)* @_ssdm_op_SpecBitsMap(float* %b_4), !map !67
+
+ST_4: StgValue_57 (37)  [1/1] 0.00ns
+:12  call void (...)* @_ssdm_op_SpecBitsMap(float* %b_3), !map !71
+
+ST_4: StgValue_58 (38)  [1/1] 0.00ns
+:13  call void (...)* @_ssdm_op_SpecBitsMap(float* %b_2), !map !75
+
+ST_4: StgValue_59 (39)  [1/1] 0.00ns
+:14  call void (...)* @_ssdm_op_SpecBitsMap(float* %b_1), !map !79
+
+ST_4: StgValue_60 (40)  [1/1] 0.00ns
+:15  call void (...)* @_ssdm_op_SpecBitsMap(float* %b_0), !map !83
+
+ST_4: StgValue_61 (41)  [1/1] 0.00ns
+:16  call void (...)* @_ssdm_op_SpecBitsMap(float* %a_7), !map !87
+
+ST_4: StgValue_62 (42)  [1/1] 0.00ns
+:17  call void (...)* @_ssdm_op_SpecBitsMap(float* %a_6), !map !91
+
+ST_4: StgValue_63 (43)  [1/1] 0.00ns
+:18  call void (...)* @_ssdm_op_SpecBitsMap(float* %a_5), !map !95
+
+ST_4: StgValue_64 (44)  [1/1] 0.00ns
+:19  call void (...)* @_ssdm_op_SpecBitsMap(float* %a_4), !map !99
+
+ST_4: StgValue_65 (45)  [1/1] 0.00ns
+:20  call void (...)* @_ssdm_op_SpecBitsMap(float* %a_3), !map !103
+
+ST_4: StgValue_66 (46)  [1/1] 0.00ns
+:21  call void (...)* @_ssdm_op_SpecBitsMap(float* %a_2), !map !107
+
+ST_4: StgValue_67 (47)  [1/1] 0.00ns
+:22  call void (...)* @_ssdm_op_SpecBitsMap(float* %a_1), !map !111
+
+ST_4: StgValue_68 (48)  [1/1] 0.00ns
+:23  call void (...)* @_ssdm_op_SpecBitsMap(float* %a_0), !map !115
+
+ST_4: StgValue_69 (49)  [1/1] 0.00ns
+:24  call void (...)* @_ssdm_op_SpecBitsMap(float 0.000000e+00) nounwind, !map !119
+
+ST_4: StgValue_70 (50)  [1/1] 0.00ns
+:25  call void (...)* @_ssdm_op_SpecTopModule([7 x i8]* @simple_str) nounwind
+
+ST_4: tmp_1 (53)  [1/4] 5.71ns  loc: ../../../../../home/drsatya/neha/add.c:14
+:28  %tmp_1 = fadd float %a_0_read, %b_0_read
+
+ST_4: StgValue_72 (54)  [1/1] 0.00ns  loc: ../../../../../home/drsatya/neha/add.c:14
+:29  call void @_ssdm_op_Write.ap_auto.floatP(float* %c_0, float %tmp_1)
+
+ST_4: tmp_1_1 (57)  [1/4] 5.71ns  loc: ../../../../../home/drsatya/neha/add.c:14
+:32  %tmp_1_1 = fadd float %a_1_read, %b_1_read
+
+ST_4: StgValue_74 (58)  [1/1] 0.00ns  loc: ../../../../../home/drsatya/neha/add.c:14
+:33  call void @_ssdm_op_Write.ap_auto.floatP(float* %c_1, float %tmp_1_1)
+
+ST_4: tmp_1_2 (61)  [1/4] 5.71ns  loc: ../../../../../home/drsatya/neha/add.c:14
+:36  %tmp_1_2 = fadd float %a_2_read, %b_2_read
+
+ST_4: StgValue_76 (62)  [1/1] 0.00ns  loc: ../../../../../home/drsatya/neha/add.c:14
+:37  call void @_ssdm_op_Write.ap_auto.floatP(float* %c_2, float %tmp_1_2)
+
+ST_4: tmp_1_3 (65)  [1/4] 5.71ns  loc: ../../../../../home/drsatya/neha/add.c:14
+:40  %tmp_1_3 = fadd float %a_3_read, %b_3_read
+
+ST_4: StgValue_78 (66)  [1/1] 0.00ns  loc: ../../../../../home/drsatya/neha/add.c:14
+:41  call void @_ssdm_op_Write.ap_auto.floatP(float* %c_3, float %tmp_1_3)
+
+ST_4: tmp_1_4 (69)  [1/4] 5.71ns  loc: ../../../../../home/drsatya/neha/add.c:14
+:44  %tmp_1_4 = fadd float %a_4_read, %b_4_read
+
+ST_4: StgValue_80 (70)  [1/1] 0.00ns  loc: ../../../../../home/drsatya/neha/add.c:14
+:45  call void @_ssdm_op_Write.ap_auto.floatP(float* %c_4, float %tmp_1_4)
+
+ST_4: tmp_1_5 (73)  [1/4] 5.71ns  loc: ../../../../../home/drsatya/neha/add.c:14
+:48  %tmp_1_5 = fadd float %a_5_read, %b_5_read
+
+ST_4: StgValue_82 (74)  [1/1] 0.00ns  loc: ../../../../../home/drsatya/neha/add.c:14
+:49  call void @_ssdm_op_Write.ap_auto.floatP(float* %c_5, float %tmp_1_5)
+
+ST_4: tmp_1_6 (77)  [1/4] 5.71ns  loc: ../../../../../home/drsatya/neha/add.c:14
+:52  %tmp_1_6 = fadd float %a_6_read, %b_6_read
+
+ST_4: StgValue_84 (78)  [1/1] 0.00ns  loc: ../../../../../home/drsatya/neha/add.c:14
+:53  call void @_ssdm_op_Write.ap_auto.floatP(float* %c_6, float %tmp_1_6)
+
+ST_4: tmp_1_7 (81)  [1/4] 5.71ns  loc: ../../../../../home/drsatya/neha/add.c:14
+:56  %tmp_1_7 = fadd float %a_7_read, %b_7_read
+
+ST_4: StgValue_86 (82)  [1/1] 0.00ns  loc: ../../../../../home/drsatya/neha/add.c:14
+:57  call void @_ssdm_op_Write.ap_auto.floatP(float* %c_7, float %tmp_1_7)
+
+ST_4: StgValue_87 (83)  [1/1] 0.00ns  loc: ../../../../../home/drsatya/neha/add.c:17
+:58  ret float 0.000000e+00
+
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 10ns, clock uncertainty: 1.25ns.
+
+ <State 1>: 5.71ns
+The critical path consists of the following:
+	wire read on port 'a_0' (../../../../../home/drsatya/neha/add.c:14) [51]  (0 ns)
+	'fadd' operation ('tmp_1', ../../../../../home/drsatya/neha/add.c:14) [53]  (5.71 ns)
+
+ <State 2>: 5.71ns
+The critical path consists of the following:
+	'fadd' operation ('tmp_1', ../../../../../home/drsatya/neha/add.c:14) [53]  (5.71 ns)
+
+ <State 3>: 5.71ns
+The critical path consists of the following:
+	'fadd' operation ('tmp_1', ../../../../../home/drsatya/neha/add.c:14) [53]  (5.71 ns)
+
+ <State 4>: 5.71ns
+The critical path consists of the following:
+	'fadd' operation ('tmp_1', ../../../../../home/drsatya/neha/add.c:14) [53]  (5.71 ns)
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+	State 4
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

@@ -1,0 +1,28 @@
+<AutoPilot:ProjectResources xmlns:AutoPilot="com.autoesl.autopilot.ui.directiveView">
+<sourceFile name="">
+<directive functionLabel="" functionName="simple" label="">
+<pragma name="ARRAY_PARTITION">
+<option name="variable" positionalBoolean="4" value="a"/>
+<option name="block" positionalBoolean="type" value=""/>
+<option name="factor" value="8"/>
+</pragma>
+</directive>
+<directive functionLabel="" functionName="simple" label="">
+<pragma name="ARRAY_PARTITION">
+<option name="variable" positionalBoolean="4" value="b"/>
+<option name="block" positionalBoolean="type" value=""/>
+<option name="factor" value="8"/>
+</pragma>
+</directive>
+<directive functionLabel="" functionName="simple" label="">
+<pragma name="ARRAY_PARTITION">
+<option name="variable" positionalBoolean="4" value="c"/>
+<option name="block" positionalBoolean="type" value=""/>
+<option name="factor" value="8"/>
+</pragma>
+</directive>
+<directive functionLabel="" functionName="simple" label="">
+<pragma name="UNROLL"/>
+</directive>
+</sourceFile>
+</AutoPilot:ProjectResources>

@@ -1,0 +1,47 @@
+#include "header.h"
+
+ float simple (float a[8],  float b[8], float c[8])
+{
+#pragma HLS array_partition variable=a block factor=8
+#pragma HLS array_partition variable=b block factor=8
+#pragma HLS array_partition variable=c block factor=8
+
+int i;
+for(i=0;i<8; i++)
+    {
+
+#pragma HLS unroll
+      c[i]= a[i]+b[i];
+
+     }
+   return 0;
+	}
+
+
+
+#ifndef  __HEADER_H__
+#define   __HEADER_H__
+#include  <math.h>
+float simple (float a[8], float b[8],  float c[8]);
+#endif
+
+
+
+
+# include <stdio.h>
+# include "header.h"
+
+ int  main()
+{
+int j;
+float main_a[8]={1,2,3,4,5,6,7,8};
+float main_b[8]={1,2,3,4,5,6,7,8};
+float main_c[8];
+simple(main_a,main_b,main_c);
+for(j=0; j<8; j++)
+{
+printf("%f\n", main_c[j]);
+}
+return 0;
+}
+

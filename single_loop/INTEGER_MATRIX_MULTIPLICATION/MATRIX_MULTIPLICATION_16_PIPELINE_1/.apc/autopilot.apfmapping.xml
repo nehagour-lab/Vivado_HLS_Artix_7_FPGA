@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<autopilotfilemapping:AutoPilotFileMapping xmlns:autopilotfilemapping="www.autoesl.com/autopilotfilemapping">
+  <source>
+    <originFiles name="mat_pipeline.cpp" path="/home/drsatya/Desktop/lab1/mat_pipeline.cpp"/>
+    <originFiles name="mat_pipeline.h" path="/home/drsatya/Desktop/lab1/mat_pipeline.h"/>
+  </source>
+  <testbench>
+    <originFiles name="mat_pipeline_tb.cpp" path="/home/drsatya/Desktop/lab1/mat_pipeline_tb.cpp"/>
+  </testbench>
+</autopilotfilemapping:AutoPilotFileMapping>

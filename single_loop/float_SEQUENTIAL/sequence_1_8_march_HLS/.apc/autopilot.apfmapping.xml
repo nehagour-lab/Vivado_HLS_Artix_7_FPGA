@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<autopilotfilemapping:AutoPilotFileMapping xmlns:autopilotfilemapping="www.autoesl.com/autopilotfilemapping">
+  <source>
+    <originFiles name="add.c" path="/home/drsatya/neha/add.c"/>
+    <originFiles name="header.h" path="/home/drsatya/neha/header.h"/>
+  </source>
+  <testbench>
+    <originFiles name="add_tb.c" path="/home/drsatya/neha/add_tb.c"/>
+  </testbench>
+</autopilotfilemapping:AutoPilotFileMapping>

@@ -1,0 +1,420 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Fri Mar  9 17:57:25 2018" VIVADOVERSION="2017.2">
+
+  <SYSTEMINFO ARCH="kintexu" DEVICE="xcku035" NAME="design_1" PACKAGE="ffva1156" SPEEDGRADE="-3"/>
+
+  <EXTERNALPORTS>
+    <PORT DIR="I" NAME="ap_start" SIGIS="undef" SIGNAME="External_Ports_ap_start">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="simple_0" PORT="ap_start"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" NAME="ap_done" SIGIS="undef" SIGNAME="simple_0_ap_done">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="simple_0" PORT="ap_done"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" NAME="ap_idle" SIGIS="undef" SIGNAME="simple_0_ap_idle">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="simple_0" PORT="ap_idle"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" NAME="ap_ready" SIGIS="undef" SIGNAME="simple_0_ap_ready">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="simple_0" PORT="ap_ready"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT CLKFREQUENCY="100000000" DIR="I" NAME="ap_clk" SIGIS="clk" SIGNAME="External_Ports_ap_clk">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="simple_0" PORT="ap_clk"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" NAME="ap_rst" SIGIS="rst" SIGNAME="External_Ports_ap_rst">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="simple_0" PORT="ap_rst"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" LEFT="31" NAME="a_0" RIGHT="0" SIGIS="data" SIGNAME="External_Ports_a_0">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="simple_0" PORT="a_0"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" LEFT="31" NAME="a_1" RIGHT="0" SIGIS="data" SIGNAME="External_Ports_a_1">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="simple_0" PORT="a_1"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" LEFT="31" NAME="a_2" RIGHT="0" SIGIS="data" SIGNAME="External_Ports_a_2">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="simple_0" PORT="a_2"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" LEFT="31" NAME="a_3" RIGHT="0" SIGIS="data" SIGNAME="External_Ports_a_3">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="simple_0" PORT="a_3"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" LEFT="31" NAME="a_4" RIGHT="0" SIGIS="data" SIGNAME="External_Ports_a_4">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="simple_0" PORT="a_4"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" LEFT="31" NAME="a_5" RIGHT="0" SIGIS="data" SIGNAME="External_Ports_a_5">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="simple_0" PORT="a_5"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" LEFT="31" NAME="a_6" RIGHT="0" SIGIS="data" SIGNAME="External_Ports_a_6">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="simple_0" PORT="a_6"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" LEFT="31" NAME="a_7" RIGHT="0" SIGIS="data" SIGNAME="External_Ports_a_7">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="simple_0" PORT="a_7"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" LEFT="31" NAME="b_0" RIGHT="0" SIGIS="data" SIGNAME="External_Ports_b_0">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="simple_0" PORT="b_0"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" LEFT="31" NAME="b_1" RIGHT="0" SIGIS="data" SIGNAME="External_Ports_b_1">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="simple_0" PORT="b_1"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" LEFT="31" NAME="b_2" RIGHT="0" SIGIS="data" SIGNAME="External_Ports_b_2">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="simple_0" PORT="b_2"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" LEFT="31" NAME="b_3" RIGHT="0" SIGIS="data" SIGNAME="External_Ports_b_3">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="simple_0" PORT="b_3"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" LEFT="31" NAME="b_4" RIGHT="0" SIGIS="data" SIGNAME="External_Ports_b_4">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="simple_0" PORT="b_4"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" LEFT="31" NAME="b_5" RIGHT="0" SIGIS="data" SIGNAME="External_Ports_b_5">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="simple_0" PORT="b_5"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" LEFT="31" NAME="b_6" RIGHT="0" SIGIS="data" SIGNAME="External_Ports_b_6">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="simple_0" PORT="b_6"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" LEFT="31" NAME="b_7" RIGHT="0" SIGIS="data" SIGNAME="External_Ports_b_7">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="simple_0" PORT="b_7"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" LEFT="31" NAME="c_7" RIGHT="0" SIGIS="data" SIGNAME="simple_0_c_7">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="simple_0" PORT="c_7"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" LEFT="31" NAME="c_6" RIGHT="0" SIGIS="data" SIGNAME="simple_0_c_6">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="simple_0" PORT="c_6"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" LEFT="31" NAME="c_5" RIGHT="0" SIGIS="data" SIGNAME="simple_0_c_5">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="simple_0" PORT="c_5"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" LEFT="31" NAME="c_4" RIGHT="0" SIGIS="data" SIGNAME="simple_0_c_4">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="simple_0" PORT="c_4"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" LEFT="31" NAME="c_3" RIGHT="0" SIGIS="data" SIGNAME="simple_0_c_3">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="simple_0" PORT="c_3"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" LEFT="31" NAME="c_2" RIGHT="0" SIGIS="data" SIGNAME="simple_0_c_2">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="simple_0" PORT="c_2"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" LEFT="31" NAME="c_1" RIGHT="0" SIGIS="data" SIGNAME="simple_0_c_1">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="simple_0" PORT="c_1"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" LEFT="31" NAME="c_0" RIGHT="0" SIGIS="data" SIGNAME="simple_0_c_0">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="simple_0" PORT="c_0"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" NAME="c_0_ap_vld" SIGIS="undef" SIGNAME="simple_0_c_0_ap_vld">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="simple_0" PORT="c_0_ap_vld"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" NAME="c_1_ap_vld" SIGIS="undef" SIGNAME="simple_0_c_1_ap_vld">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="simple_0" PORT="c_1_ap_vld"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" NAME="c_2_ap_vld" SIGIS="undef" SIGNAME="simple_0_c_2_ap_vld">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="simple_0" PORT="c_2_ap_vld"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" NAME="c_3_ap_vld" SIGIS="undef" SIGNAME="simple_0_c_3_ap_vld">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="simple_0" PORT="c_3_ap_vld"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" NAME="c_4_ap_vld" SIGIS="undef" SIGNAME="simple_0_c_4_ap_vld">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="simple_0" PORT="c_4_ap_vld"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" NAME="c_5_ap_vld" SIGIS="undef" SIGNAME="simple_0_c_5_ap_vld">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="simple_0" PORT="c_5_ap_vld"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" NAME="c_6_ap_vld" SIGIS="undef" SIGNAME="simple_0_c_6_ap_vld">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="simple_0" PORT="c_6_ap_vld"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" NAME="c_7_ap_vld" SIGIS="undef" SIGNAME="simple_0_c_7_ap_vld">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="simple_0" PORT="c_7_ap_vld"/>
+      </CONNECTIONS>
+    </PORT>
+  </EXTERNALPORTS>
+
+  <EXTERNALINTERFACES/>
+
+  <MODULES>
+    <MODULE FULLNAME="/simple_0" HWVERSION="1.0" INSTANCE="simple_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="simple" VLNV="xilinx.com:hls:simple:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="Component_Name" VALUE="design_1_simple_0_0"/>
+        <PARAMETER NAME="clk_period" VALUE="10.000000"/>
+        <PARAMETER NAME="machine" VALUE="64"/>
+        <PARAMETER NAME="combinational" VALUE="0"/>
+        <PARAMETER NAME="latency" VALUE="3"/>
+        <PARAMETER NAME="II" VALUE="x"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT DIR="O" NAME="c_0_ap_vld" SIGIS="undef" SIGNAME="simple_0_c_0_ap_vld">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="c_0_ap_vld"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="c_1_ap_vld" SIGIS="undef" SIGNAME="simple_0_c_1_ap_vld">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="c_1_ap_vld"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="c_2_ap_vld" SIGIS="undef" SIGNAME="simple_0_c_2_ap_vld">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="c_2_ap_vld"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="c_3_ap_vld" SIGIS="undef" SIGNAME="simple_0_c_3_ap_vld">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="c_3_ap_vld"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="c_4_ap_vld" SIGIS="undef" SIGNAME="simple_0_c_4_ap_vld">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="c_4_ap_vld"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="c_5_ap_vld" SIGIS="undef" SIGNAME="simple_0_c_5_ap_vld">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="c_5_ap_vld"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="c_6_ap_vld" SIGIS="undef" SIGNAME="simple_0_c_6_ap_vld">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="c_6_ap_vld"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="c_7_ap_vld" SIGIS="undef" SIGNAME="simple_0_c_7_ap_vld">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="c_7_ap_vld"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT CLKFREQUENCY="100000000" DIR="I" NAME="ap_clk" SIGIS="clk" SIGNAME="External_Ports_ap_clk">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="ap_clk"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="ap_rst" SIGIS="rst" SIGNAME="External_Ports_ap_rst">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="ap_rst"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="ap_start" SIGIS="undef" SIGNAME="External_Ports_ap_start">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="ap_start"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="ap_done" SIGIS="undef" SIGNAME="simple_0_ap_done">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="ap_done"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="ap_idle" SIGIS="undef" SIGNAME="simple_0_ap_idle">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="ap_idle"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="ap_ready" SIGIS="undef" SIGNAME="simple_0_ap_ready">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="ap_ready"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="31" NAME="ap_return" RIGHT="0" SIGIS="data"/>
+        <PORT DIR="I" LEFT="31" NAME="a_0" RIGHT="0" SIGIS="data" SIGNAME="External_Ports_a_0">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="a_0"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="31" NAME="a_1" RIGHT="0" SIGIS="data" SIGNAME="External_Ports_a_1">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="a_1"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="31" NAME="a_2" RIGHT="0" SIGIS="data" SIGNAME="External_Ports_a_2">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="a_2"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="31" NAME="a_3" RIGHT="0" SIGIS="data" SIGNAME="External_Ports_a_3">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="a_3"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="31" NAME="a_4" RIGHT="0" SIGIS="data" SIGNAME="External_Ports_a_4">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="a_4"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="31" NAME="a_5" RIGHT="0" SIGIS="data" SIGNAME="External_Ports_a_5">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="a_5"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="31" NAME="a_6" RIGHT="0" SIGIS="data" SIGNAME="External_Ports_a_6">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="a_6"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="31" NAME="a_7" RIGHT="0" SIGIS="data" SIGNAME="External_Ports_a_7">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="a_7"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="31" NAME="b_0" RIGHT="0" SIGIS="data" SIGNAME="External_Ports_b_0">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="b_0"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="31" NAME="b_1" RIGHT="0" SIGIS="data" SIGNAME="External_Ports_b_1">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="b_1"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="31" NAME="b_2" RIGHT="0" SIGIS="data" SIGNAME="External_Ports_b_2">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="b_2"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="31" NAME="b_3" RIGHT="0" SIGIS="data" SIGNAME="External_Ports_b_3">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="b_3"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="31" NAME="b_4" RIGHT="0" SIGIS="data" SIGNAME="External_Ports_b_4">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="b_4"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="31" NAME="b_5" RIGHT="0" SIGIS="data" SIGNAME="External_Ports_b_5">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="b_5"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="31" NAME="b_6" RIGHT="0" SIGIS="data" SIGNAME="External_Ports_b_6">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="b_6"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="31" NAME="b_7" RIGHT="0" SIGIS="data" SIGNAME="External_Ports_b_7">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="b_7"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="31" NAME="c_0" RIGHT="0" SIGIS="data" SIGNAME="simple_0_c_0">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="c_0"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="31" NAME="c_1" RIGHT="0" SIGIS="data" SIGNAME="simple_0_c_1">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="c_1"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="31" NAME="c_2" RIGHT="0" SIGIS="data" SIGNAME="simple_0_c_2">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="c_2"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="31" NAME="c_3" RIGHT="0" SIGIS="data" SIGNAME="simple_0_c_3">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="c_3"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="31" NAME="c_4" RIGHT="0" SIGIS="data" SIGNAME="simple_0_c_4">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="c_4"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="31" NAME="c_5" RIGHT="0" SIGIS="data" SIGNAME="simple_0_c_5">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="c_5"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="31" NAME="c_6" RIGHT="0" SIGIS="data" SIGNAME="simple_0_c_6">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="c_6"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="31" NAME="c_7" RIGHT="0" SIGIS="data" SIGNAME="simple_0_c_7">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="c_7"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES>
+        <BUSINTERFACE BUSNAME="__NOC__" NAME="ap_ctrl" TYPE="TARGET" VLNV="xilinx.com:interface:acc_handshake:1.0">
+          <PARAMETER NAME="LAYERED_METADATA" VALUE="xilinx.com:interface:datatypes:1.0 {start {datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 1} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0}}} done {datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 1} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0}}} idle {datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 1} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0}}} ready {datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 1} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0}}}}"/>
+          <PORTMAPS>
+            <PORTMAP LOGICAL="start" PHYSICAL="ap_start"/>
+            <PORTMAP LOGICAL="done" PHYSICAL="ap_done"/>
+            <PORTMAP LOGICAL="idle" PHYSICAL="ap_idle"/>
+            <PORTMAP LOGICAL="ready" PHYSICAL="ap_ready"/>
+          </PORTMAPS>
+        </BUSINTERFACE>
+      </BUSINTERFACES>
+    </MODULE>
+  </MODULES>
+
+</EDKSYSTEM>

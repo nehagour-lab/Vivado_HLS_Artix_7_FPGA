@@ -1,0 +1,19 @@
+
+
+Implementation tool: Xilinx Vivado v.2017.2
+Project:             MATRIX_MULTIPLICATION_16_PIPELINE_1
+Solution:            solution1
+Device target:       xc7a35tcpg236-3
+Report date:         Fri Mar 16 10:01:52 IST 2018
+
+#=== Post-Synthesis Resource usage ===
+SLICE:            0
+LUT:             52
+FF:              35
+DSP:              1
+BRAM:             0
+SRL:              0
+#=== Final timing ===
+CP required:    10.000
+CP achieved post-synthesis:    2.084
+Timing met

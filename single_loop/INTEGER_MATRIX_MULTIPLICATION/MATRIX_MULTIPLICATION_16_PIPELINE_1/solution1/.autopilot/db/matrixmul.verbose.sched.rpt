@@ -1,0 +1,364 @@
+
+
+================================================================
+== Vivado HLS Report for 'matrixmul'
+================================================================
+* Date:           Fri Mar 16 10:00:21 2018
+
+* Version:        2017.2 (Build 1909853 on Thu Jun 15 18:55:24 MDT 2017)
+* Project:        MATRIX_MULTIPLICATION_16_PIPELINE_1
+* Solution:       solution1
+* Product family: artix7
+* Target device:  xc7a35tcpg236-3
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing (ns): 
+    * Summary: 
+    +--------+-------+----------+------------+
+    |  Clock | Target| Estimated| Uncertainty|
+    +--------+-------+----------+------------+
+    |ap_clk  |  10.00|      8.02|        1.25|
+    +--------+-------+----------+------------+
+
++ Latency (clock cycles): 
+    * Summary: 
+    +-----+-----+-----+-----+---------+
+    |  Latency  |  Interval | Pipeline|
+    | min | max | min | max |   Type  |
+    +-----+-----+-----+-----+---------+
+    |   82|   82|   83|   83|   none  |
+    +-----+-----+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +------------+-----+-----+----------+-----------+-----------+------+----------+
+        |            |  Latency  | Iteration|  Initiation Interval  | Trip |          |
+        |  Loop Name | min | max |  Latency |  achieved |   target  | Count| Pipelined|
+        +------------+-----+-----+----------+-----------+-----------+------+----------+
+        |- Row_Col   |   81|   81|         9|          -|          -|     9|    no    |
+        | + Product  |    6|    6|         3|          2|          1|     3|    yes   |
+        +------------+-----+-----+----------+-----------+-----------+------+----------+
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 1
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
++ Individual pipeline summary: 
+  * Pipeline-0: initiation interval (II) = 2, depth = 3
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states: 6
+* Pipeline: 1
+  Pipeline-0: II = 2, D = 3, States = { 3 4 5 }
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 
+	2  / true
+2 --> 
+	3  / (!exitcond_flatten)
+3 --> 
+	6  / (exitcond)
+	4  / (!exitcond)
+4 --> 
+	5  / true
+5 --> 
+	3  / true
+6 --> 
+	2  / true
+* FSM state operations: 
+
+ <State 1>: 1.17ns
+ST_1: StgValue_7 (4)  [1/1] 0.00ns
+:0  call void (...)* @_ssdm_op_SpecBitsMap([9 x i8]* %a) nounwind, !map !7
+
+ST_1: StgValue_8 (5)  [1/1] 0.00ns
+:1  call void (...)* @_ssdm_op_SpecBitsMap([9 x i8]* %b) nounwind, !map !13
+
+ST_1: StgValue_9 (6)  [1/1] 0.00ns
+:2  call void (...)* @_ssdm_op_SpecBitsMap([9 x i16]* %res) nounwind, !map !17
+
+ST_1: StgValue_10 (7)  [1/1] 0.00ns
+:3  call void (...)* @_ssdm_op_SpecTopModule([10 x i8]* @matrixmul_str) nounwind
+
+ST_1: StgValue_11 (8)  [1/1] 1.17ns  loc: ../../../../../../home/drsatya/Desktop/lab1/mat_pipeline.cpp:10
+:4  br label %1
+
+
+ <State 2>: 8.02ns
+ST_2: indvar_flatten (10)  [1/1] 0.00ns
+:0  %indvar_flatten = phi i4 [ 0, %0 ], [ %indvar_flatten_next, %3 ]
+
+ST_2: i (11)  [1/1] 0.00ns  loc: ../../../../../../home/drsatya/Desktop/lab1/mat_pipeline.cpp:16
+:1  %i = phi i2 [ 0, %0 ], [ %tmp_mid2_v, %3 ]
+
+ST_2: j (12)  [1/1] 0.00ns
+:2  %j = phi i2 [ 0, %0 ], [ %j_1, %3 ]
+
+ST_2: exitcond_flatten (13)  [1/1] 2.11ns
+:3  %exitcond_flatten = icmp eq i4 %indvar_flatten, -7
+
+ST_2: indvar_flatten_next (14)  [1/1] 1.69ns
+:4  %indvar_flatten_next = add i4 %indvar_flatten, 1
+
+ST_2: StgValue_17 (15)  [1/1] 0.00ns
+:5  br i1 %exitcond_flatten, label %4, label %.reset
+
+ST_2: i_1 (17)  [1/1] 1.58ns  loc: ../../../../../../home/drsatya/Desktop/lab1/mat_pipeline.cpp:10
+.reset:0  %i_1 = add i2 %i, 1
+
+ST_2: StgValue_19 (18)  [1/1] 0.00ns
+.reset:1  call void (...)* @_ssdm_op_SpecLoopName([8 x i8]* @Row_Col_str)
+
+ST_2: empty_4 (19)  [1/1] 0.00ns
+.reset:2  %empty_4 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 9, i64 9, i64 9) nounwind
+
+ST_2: exitcond1 (20)  [1/1] 1.50ns  loc: ../../../../../../home/drsatya/Desktop/lab1/mat_pipeline.cpp:13
+.reset:3  %exitcond1 = icmp eq i2 %j, -1
+
+ST_2: j_mid2 (21)  [1/1] 1.50ns  loc: ../../../../../../home/drsatya/Desktop/lab1/mat_pipeline.cpp:13
+.reset:4  %j_mid2 = select i1 %exitcond1, i2 0, i2 %j
+
+ST_2: tmp_mid2_v (22)  [1/1] 1.50ns  loc: ../../../../../../home/drsatya/Desktop/lab1/mat_pipeline.cpp:16
+.reset:5  %tmp_mid2_v = select i1 %exitcond1, i2 %i_1, i2 %i
+
+ST_2: tmp_mid2_cast (23)  [1/1] 0.00ns  loc: ../../../../../../home/drsatya/Desktop/lab1/mat_pipeline.cpp:16
+.reset:6  %tmp_mid2_cast = zext i2 %tmp_mid2_v to i5
+
+ST_2: tmp (24)  [1/1] 0.00ns  loc: ../../../../../../home/drsatya/Desktop/lab1/mat_pipeline.cpp:16
+.reset:7  %tmp = call i4 @_ssdm_op_BitConcatenate.i4.i2.i2(i2 %tmp_mid2_v, i2 0)
+
+ST_2: p_shl_cast (25)  [1/1] 0.00ns  loc: ../../../../../../home/drsatya/Desktop/lab1/mat_pipeline.cpp:19
+.reset:8  %p_shl_cast = zext i4 %tmp to i5
+
+ST_2: tmp_1 (26)  [1/1] 1.69ns  loc: ../../../../../../home/drsatya/Desktop/lab1/mat_pipeline.cpp:19
+.reset:9  %tmp_1 = sub i5 %p_shl_cast, %tmp_mid2_cast
+
+ST_2: StgValue_28 (27)  [1/1] 0.00ns  loc: ../../../../../../home/drsatya/Desktop/lab1/mat_pipeline.cpp:13
+.reset:10  call void (...)* @_ssdm_op_SpecLoopName([4 x i8]* @p_str1) nounwind
+
+ST_2: tmp_3 (28)  [1/1] 0.00ns  loc: ../../../../../../home/drsatya/Desktop/lab1/mat_pipeline.cpp:13
+.reset:11  %tmp_3 = call i32 (...)* @_ssdm_op_SpecRegionBegin([4 x i8]* @p_str1) nounwind
+
+ST_2: tmp_2_cast (29)  [1/1] 0.00ns  loc: ../../../../../../home/drsatya/Desktop/lab1/mat_pipeline.cpp:16
+.reset:12  %tmp_2_cast = zext i2 %j_mid2 to i5
+
+ST_2: tmp_s (30)  [1/1] 1.69ns  loc: ../../../../../../home/drsatya/Desktop/lab1/mat_pipeline.cpp:16
+.reset:13  %tmp_s = add i5 %tmp_1, %tmp_2_cast
+
+ST_2: tmp_10_cast (31)  [1/1] 0.00ns  loc: ../../../../../../home/drsatya/Desktop/lab1/mat_pipeline.cpp:16
+.reset:14  %tmp_10_cast = sext i5 %tmp_s to i64
+
+ST_2: res_addr (32)  [1/1] 0.00ns  loc: ../../../../../../home/drsatya/Desktop/lab1/mat_pipeline.cpp:16
+.reset:15  %res_addr = getelementptr [9 x i16]* %res, i64 0, i64 %tmp_10_cast
+
+ST_2: StgValue_34 (33)  [1/1] 1.57ns  loc: ../../../../../../home/drsatya/Desktop/lab1/mat_pipeline.cpp:16
+.reset:16  store i16 0, i16* %res_addr, align 2
+
+ST_2: StgValue_35 (34)  [1/1] 1.17ns  loc: ../../../../../../home/drsatya/Desktop/lab1/mat_pipeline.cpp:17
+.reset:17  br label %2
+
+ST_2: StgValue_36 (70)  [1/1] 0.00ns  loc: ../../../../../../home/drsatya/Desktop/lab1/mat_pipeline.cpp:23
+:0  ret void
+
+
+ <State 3>: 3.97ns
+ST_3: k (36)  [1/1] 0.00ns
+:0  %k = phi i2 [ 0, %.reset ], [ %k_1, %ifBlock ]
+
+ST_3: exitcond (37)  [1/1] 1.50ns  loc: ../../../../../../home/drsatya/Desktop/lab1/mat_pipeline.cpp:17
+:1  %exitcond = icmp eq i2 %k, -1
+
+ST_3: k_1 (38)  [1/1] 1.58ns  loc: ../../../../../../home/drsatya/Desktop/lab1/mat_pipeline.cpp:17
+:2  %k_1 = add i2 %k, 1
+
+ST_3: StgValue_40 (39)  [1/1] 0.00ns  loc: ../../../../../../home/drsatya/Desktop/lab1/mat_pipeline.cpp:17
+:3  br i1 %exitcond, label %3, label %ifBlock
+
+ST_3: tmp_4_cast (45)  [1/1] 0.00ns  loc: ../../../../../../home/drsatya/Desktop/lab1/mat_pipeline.cpp:19
+ifBlock:4  %tmp_4_cast = zext i2 %k to i5
+
+ST_3: tmp_2 (46)  [1/1] 1.69ns  loc: ../../../../../../home/drsatya/Desktop/lab1/mat_pipeline.cpp:19
+ifBlock:5  %tmp_2 = add i5 %tmp_1, %tmp_4_cast
+
+ST_3: tmp_11_cast (47)  [1/1] 0.00ns  loc: ../../../../../../home/drsatya/Desktop/lab1/mat_pipeline.cpp:19
+ifBlock:6  %tmp_11_cast = sext i5 %tmp_2 to i64
+
+ST_3: a_addr (48)  [1/1] 0.00ns  loc: ../../../../../../home/drsatya/Desktop/lab1/mat_pipeline.cpp:19
+ifBlock:7  %a_addr = getelementptr [9 x i8]* %a, i64 0, i64 %tmp_11_cast
+
+ST_3: tmp_4 (49)  [1/1] 0.00ns  loc: ../../../../../../home/drsatya/Desktop/lab1/mat_pipeline.cpp:17
+ifBlock:8  %tmp_4 = call i4 @_ssdm_op_BitConcatenate.i4.i2.i2(i2 %k, i2 0)
+
+ST_3: p_shl1_cast (50)  [1/1] 0.00ns  loc: ../../../../../../home/drsatya/Desktop/lab1/mat_pipeline.cpp:19
+ifBlock:9  %p_shl1_cast = zext i4 %tmp_4 to i5
+
+ST_3: tmp_10 (51)  [1/1] 1.20ns  loc: ../../../../../../home/drsatya/Desktop/lab1/mat_pipeline.cpp:19
+ifBlock:10  %tmp_10 = sub i5 %p_shl1_cast, %tmp_4_cast
+
+ST_3: tmp_11 (52)  [1/1] 1.20ns  loc: ../../../../../../home/drsatya/Desktop/lab1/mat_pipeline.cpp:19
+ifBlock:11  %tmp_11 = add i5 %tmp_10, %tmp_2_cast
+
+ST_3: tmp_14_cast (53)  [1/1] 0.00ns  loc: ../../../../../../home/drsatya/Desktop/lab1/mat_pipeline.cpp:19
+ifBlock:12  %tmp_14_cast = sext i5 %tmp_11 to i64
+
+ST_3: b_addr (54)  [1/1] 0.00ns  loc: ../../../../../../home/drsatya/Desktop/lab1/mat_pipeline.cpp:19
+ifBlock:13  %b_addr = getelementptr [9 x i8]* %b, i64 0, i64 %tmp_14_cast
+
+ST_3: a_load (55)  [2/2] 1.57ns  loc: ../../../../../../home/drsatya/Desktop/lab1/mat_pipeline.cpp:19
+ifBlock:14  %a_load = load i8* %a_addr, align 1
+
+ST_3: b_load (57)  [2/2] 1.57ns  loc: ../../../../../../home/drsatya/Desktop/lab1/mat_pipeline.cpp:19
+ifBlock:16  %b_load = load i8* %b_addr, align 1
+
+
+ <State 4>: 1.57ns
+ST_4: a_load (55)  [1/2] 1.57ns  loc: ../../../../../../home/drsatya/Desktop/lab1/mat_pipeline.cpp:19
+ifBlock:14  %a_load = load i8* %a_addr, align 1
+
+ST_4: b_load (57)  [1/2] 1.57ns  loc: ../../../../../../home/drsatya/Desktop/lab1/mat_pipeline.cpp:19
+ifBlock:16  %b_load = load i8* %b_addr, align 1
+
+ST_4: res_load (60)  [2/2] 1.57ns  loc: ../../../../../../home/drsatya/Desktop/lab1/mat_pipeline.cpp:19
+ifBlock:19  %res_load = load i16* %res_addr, align 2
+
+
+ <State 5>: 7.36ns
+ST_5: empty (41)  [1/1] 0.00ns
+ifBlock:0  %empty = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 3, i64 3, i64 3) nounwind
+
+ST_5: StgValue_57 (42)  [1/1] 0.00ns  loc: ../../../../../../home/drsatya/Desktop/lab1/mat_pipeline.cpp:17
+ifBlock:1  call void (...)* @_ssdm_op_SpecLoopName([8 x i8]* @p_str2) nounwind
+
+ST_5: tmp_9 (43)  [1/1] 0.00ns  loc: ../../../../../../home/drsatya/Desktop/lab1/mat_pipeline.cpp:17
+ifBlock:2  %tmp_9 = call i32 (...)* @_ssdm_op_SpecRegionBegin([8 x i8]* @p_str2) nounwind
+
+ST_5: StgValue_59 (44)  [1/1] 0.00ns  loc: ../../../../../../home/drsatya/Desktop/lab1/mat_pipeline.cpp:18
+ifBlock:3  call void (...)* @_ssdm_op_SpecPipeline(i32 1, i32 1, i32 1, i32 0, [1 x i8]* @p_str3) nounwind
+
+ST_5: tmp_5 (56)  [1/1] 0.00ns  loc: ../../../../../../home/drsatya/Desktop/lab1/mat_pipeline.cpp:19
+ifBlock:15  %tmp_5 = sext i8 %a_load to i16
+
+ST_5: tmp_6 (58)  [1/1] 0.00ns  loc: ../../../../../../home/drsatya/Desktop/lab1/mat_pipeline.cpp:19
+ifBlock:17  %tmp_6 = sext i8 %b_load to i16
+
+ST_5: tmp_7 (59)  [1/1] 2.46ns  loc: ../../../../../../home/drsatya/Desktop/lab1/mat_pipeline.cpp:19
+ifBlock:18  %tmp_7 = mul i16 %tmp_6, %tmp_5
+
+ST_5: res_load (60)  [1/2] 1.57ns  loc: ../../../../../../home/drsatya/Desktop/lab1/mat_pipeline.cpp:19
+ifBlock:19  %res_load = load i16* %res_addr, align 2
+
+ST_5: tmp_8 (61)  [1/1] 3.33ns  loc: ../../../../../../home/drsatya/Desktop/lab1/mat_pipeline.cpp:19
+ifBlock:20  %tmp_8 = add i16 %tmp_7, %res_load
+
+ST_5: StgValue_65 (62)  [1/1] 1.57ns  loc: ../../../../../../home/drsatya/Desktop/lab1/mat_pipeline.cpp:19
+ifBlock:21  store i16 %tmp_8, i16* %res_addr, align 2
+
+ST_5: empty_2 (63)  [1/1] 0.00ns  loc: ../../../../../../home/drsatya/Desktop/lab1/mat_pipeline.cpp:20
+ifBlock:22  %empty_2 = call i32 (...)* @_ssdm_op_SpecRegionEnd([8 x i8]* @p_str2, i32 %tmp_9) nounwind
+
+ST_5: StgValue_67 (64)  [1/1] 0.00ns
+ifBlock:23  br label %2
+
+
+ <State 6>: 1.58ns
+ST_6: empty_3 (66)  [1/1] 0.00ns  loc: ../../../../../../home/drsatya/Desktop/lab1/mat_pipeline.cpp:21
+:0  %empty_3 = call i32 (...)* @_ssdm_op_SpecRegionEnd([4 x i8]* @p_str1, i32 %tmp_3) nounwind
+
+ST_6: j_1 (67)  [1/1] 1.58ns  loc: ../../../../../../home/drsatya/Desktop/lab1/mat_pipeline.cpp:13
+:1  %j_1 = add i2 %j_mid2, 1
+
+ST_6: StgValue_70 (68)  [1/1] 0.00ns  loc: ../../../../../../home/drsatya/Desktop/lab1/mat_pipeline.cpp:13
+:2  br label %1
+
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 10ns, clock uncertainty: 1.25ns.
+
+ <State 1>: 1.17ns
+The critical path consists of the following:
+	multiplexor before 'phi' operation ('indvar_flatten') with incoming values : ('indvar_flatten_next') [10]  (1.17 ns)
+
+ <State 2>: 8.02ns
+The critical path consists of the following:
+	'phi' operation ('i', ../../../../../../home/drsatya/Desktop/lab1/mat_pipeline.cpp:16) with incoming values : ('tmp_mid2_v', ../../../../../../home/drsatya/Desktop/lab1/mat_pipeline.cpp:16) [11]  (0 ns)
+	'add' operation ('i', ../../../../../../home/drsatya/Desktop/lab1/mat_pipeline.cpp:10) [17]  (1.58 ns)
+	'select' operation ('tmp_mid2_v', ../../../../../../home/drsatya/Desktop/lab1/mat_pipeline.cpp:16) [22]  (1.5 ns)
+	'sub' operation ('tmp_1', ../../../../../../home/drsatya/Desktop/lab1/mat_pipeline.cpp:19) [26]  (1.69 ns)
+	'add' operation ('tmp_s', ../../../../../../home/drsatya/Desktop/lab1/mat_pipeline.cpp:16) [30]  (1.69 ns)
+	'getelementptr' operation ('res_addr', ../../../../../../home/drsatya/Desktop/lab1/mat_pipeline.cpp:16) [32]  (0 ns)
+	'store' operation (../../../../../../home/drsatya/Desktop/lab1/mat_pipeline.cpp:16) of constant 0 on array 'res' [33]  (1.57 ns)
+
+ <State 3>: 3.97ns
+The critical path consists of the following:
+	'phi' operation ('k') with incoming values : ('k', ../../../../../../home/drsatya/Desktop/lab1/mat_pipeline.cpp:17) [36]  (0 ns)
+	'sub' operation ('tmp_10', ../../../../../../home/drsatya/Desktop/lab1/mat_pipeline.cpp:19) [51]  (1.2 ns)
+	'add' operation ('tmp_11', ../../../../../../home/drsatya/Desktop/lab1/mat_pipeline.cpp:19) [52]  (1.2 ns)
+	'getelementptr' operation ('b_addr', ../../../../../../home/drsatya/Desktop/lab1/mat_pipeline.cpp:19) [54]  (0 ns)
+	'load' operation ('b_load', ../../../../../../home/drsatya/Desktop/lab1/mat_pipeline.cpp:19) on array 'b' [57]  (1.57 ns)
+
+ <State 4>: 1.57ns
+The critical path consists of the following:
+	'load' operation ('a_load', ../../../../../../home/drsatya/Desktop/lab1/mat_pipeline.cpp:19) on array 'a' [55]  (1.57 ns)
+
+ <State 5>: 7.36ns
+The critical path consists of the following:
+	'mul' operation ('tmp_7', ../../../../../../home/drsatya/Desktop/lab1/mat_pipeline.cpp:19) [59]  (2.46 ns)
+	'add' operation ('tmp_8', ../../../../../../home/drsatya/Desktop/lab1/mat_pipeline.cpp:19) [61]  (3.33 ns)
+	'store' operation (../../../../../../home/drsatya/Desktop/lab1/mat_pipeline.cpp:19) of variable 'tmp_8', ../../../../../../home/drsatya/Desktop/lab1/mat_pipeline.cpp:19 on array 'res' [62]  (1.57 ns)
+
+ <State 6>: 1.58ns
+The critical path consists of the following:
+	'add' operation ('j', ../../../../../../home/drsatya/Desktop/lab1/mat_pipeline.cpp:13) [67]  (1.58 ns)
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+	State 4
+	State 5
+	State 6
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

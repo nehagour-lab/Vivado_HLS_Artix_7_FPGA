@@ -1,0 +1,36 @@
+{
+   guistr: "# # String gsaved with Nlview 6.6.8  2016-12-21 bk=1.3817 VDI=40 GEI=35 GUI=JA:1.6
+#  -string -flagsOSRD
+preplace port ap_start -pg 1 -y -240 -defaultsOSRD
+preplace port wr_en_1 -pg 1 -y 160 -defaultsOSRD
+preplace port ap_ready -pg 1 -y -190 -defaultsOSRD
+preplace port ap_idle -pg 1 -y -210 -defaultsOSRD
+preplace port ap_clk -pg 1 -y -170 -defaultsOSRD
+preplace port ap_done -pg 1 -y -230 -defaultsOSRD
+preplace port ap_rst -pg 1 -y -150 -defaultsOSRD
+preplace port wr_en -pg 1 -y -220 -defaultsOSRD
+preplace portBus din_1 -pg 1 -y 140 -defaultsOSRD
+preplace portBus din -pg 1 -y -260 -defaultsOSRD
+preplace portBus c_d0 -pg 1 -y -110 -defaultsOSRD
+preplace inst simple_0 -pg 1 -lvl 2 -y -190 -defaultsOSRD
+preplace inst fifo_generator_0 -pg 1 -lvl 1 -y -200 -defaultsOSRD
+preplace inst fifo_generator_1 -pg 1 -lvl 1 -y 190 -defaultsOSRD
+preplace netloc simple_0_ap_idle 1 1 2 290 -340 900J
+preplace netloc wr_en_1 1 0 1 -40
+preplace netloc simple_0_ap_done 1 1 2 310 -330 890J
+preplace netloc simple_0_c_d0 1 2 1 N
+preplace netloc simple_0_b_ce0 1 0 3 -30 -350 NJ -350 870
+preplace netloc simple_0_a_ce0 1 0 3 -10 -50 NJ -50 860
+preplace netloc ap_start_1 1 0 2 -50J -340 280
+preplace netloc simple_0_ap_ready 1 1 2 300 -320 880
+preplace netloc wr_en_1_1 1 0 1 N
+preplace netloc fifo_generator_1_dout 1 0 2 -10 -20 310J
+preplace netloc fifo_generator_0_dout 1 0 2 -20 -60 290J
+preplace netloc din_1 1 0 1 -40
+preplace netloc Net1 1 0 2 -50 -30 300J
+preplace netloc Net 1 0 2 -40 -40 280J
+preplace netloc din_1_1 1 0 1 N
+levelinfo -pg 1 -70 140 690 930 -top -360 -bot 330
+",
+}
+

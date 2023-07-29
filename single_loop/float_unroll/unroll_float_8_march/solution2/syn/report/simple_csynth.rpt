@@ -1,0 +1,162 @@
+
+
+================================================================
+== Vivado HLS Report for 'simple'
+================================================================
+* Date:           Fri Mar  9 18:25:42 2018
+
+* Version:        2017.2 (Build 1909853 on Thu Jun 15 18:55:24 MDT 2017)
+* Project:        unroll_float_8_march
+* Solution:       solution2
+* Product family: kintexu
+* Target device:  xcku035-ffva1156-3-e
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing (ns): 
+    * Summary: 
+    +--------+-------+----------+------------+
+    |  Clock | Target| Estimated| Uncertainty|
+    +--------+-------+----------+------------+
+    |ap_clk  |  10.00|      5.71|        1.25|
+    +--------+-------+----------+------------+
+
++ Latency (clock cycles): 
+    * Summary: 
+    +-----+-----+-----+-----+---------+
+    |  Latency  |  Interval | Pipeline|
+    | min | max | min | max |   Type  |
+    +-----+-----+-----+-----+---------+
+    |    3|    3|    4|    4|   none  |
+    +-----+-----+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        N/A
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++-----------------+---------+-------+--------+--------+
+|       Name      | BRAM_18K| DSP48E|   FF   |   LUT  |
++-----------------+---------+-------+--------+--------+
+|DSP              |        -|      -|       -|       -|
+|Expression       |        -|      -|       -|       -|
+|FIFO             |        -|      -|       -|       -|
+|Instance         |        -|     16|    1816|    1744|
+|Memory           |        -|      -|       -|       -|
+|Multiplexer      |        -|      -|       -|      27|
+|Register         |        -|      -|       4|       -|
++-----------------+---------+-------+--------+--------+
+|Total            |        0|     16|    1820|    1771|
++-----------------+---------+-------+--------+--------+
+|Available        |     1080|   1700|  406256|  203128|
++-----------------+---------+-------+--------+--------+
+|Utilization (%)  |        0|   ~0  |   ~0   |   ~0   |
++-----------------+---------+-------+--------+--------+
+
++ Detail: 
+    * Instance: 
+    +-------------------------+----------------------+---------+-------+-----+-----+
+    |         Instance        |        Module        | BRAM_18K| DSP48E|  FF | LUT |
+    +-------------------------+----------------------+---------+-------+-----+-----+
+    |simple_fadd_32ns_bkb_U1  |simple_fadd_32ns_bkb  |        0|      2|  227|  218|
+    |simple_fadd_32ns_bkb_U2  |simple_fadd_32ns_bkb  |        0|      2|  227|  218|
+    |simple_fadd_32ns_bkb_U3  |simple_fadd_32ns_bkb  |        0|      2|  227|  218|
+    |simple_fadd_32ns_bkb_U4  |simple_fadd_32ns_bkb  |        0|      2|  227|  218|
+    |simple_fadd_32ns_bkb_U5  |simple_fadd_32ns_bkb  |        0|      2|  227|  218|
+    |simple_fadd_32ns_bkb_U6  |simple_fadd_32ns_bkb  |        0|      2|  227|  218|
+    |simple_fadd_32ns_bkb_U7  |simple_fadd_32ns_bkb  |        0|      2|  227|  218|
+    |simple_fadd_32ns_bkb_U8  |simple_fadd_32ns_bkb  |        0|      2|  227|  218|
+    +-------------------------+----------------------+---------+-------+-----+-----+
+    |Total                    |                      |        0|     16| 1816| 1744|
+    +-------------------------+----------------------+---------+-------+-----+-----+
+
+    * DSP48: 
+    N/A
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    N/A
+
+    * Multiplexer: 
+    +-----------+----+-----------+-----+-----------+
+    |    Name   | LUT| Input Size| Bits| Total Bits|
+    +-----------+----+-----------+-----+-----------+
+    |ap_NS_fsm  |  27|          5|    1|          5|
+    +-----------+----+-----------+-----+-----------+
+    |Total      |  27|          5|    1|          5|
+    +-----------+----+-----------+-----+-----------+
+
+    * Register: 
+    +-----------+---+----+-----+-----------+
+    |    Name   | FF| LUT| Bits| Const Bits|
+    +-----------+---+----+-----+-----------+
+    |ap_CS_fsm  |  4|   0|    4|          0|
+    +-----------+---+----+-----+-----------+
+    |Total      |  4|   0|    4|          0|
+    +-----------+---+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++------------+-----+-----+------------+--------------+--------------+
+|  RTL Ports | Dir | Bits|  Protocol  | Source Object|    C Type    |
++------------+-----+-----+------------+--------------+--------------+
+|ap_clk      |  in |    1| ap_ctrl_hs |    simple    | return value |
+|ap_rst      |  in |    1| ap_ctrl_hs |    simple    | return value |
+|ap_start    |  in |    1| ap_ctrl_hs |    simple    | return value |
+|ap_done     | out |    1| ap_ctrl_hs |    simple    | return value |
+|ap_idle     | out |    1| ap_ctrl_hs |    simple    | return value |
+|ap_ready    | out |    1| ap_ctrl_hs |    simple    | return value |
+|ap_return   | out |   32| ap_ctrl_hs |    simple    | return value |
+|a_0         |  in |   32|   ap_none  |      a_0     |    pointer   |
+|a_1         |  in |   32|   ap_none  |      a_1     |    pointer   |
+|a_2         |  in |   32|   ap_none  |      a_2     |    pointer   |
+|a_3         |  in |   32|   ap_none  |      a_3     |    pointer   |
+|a_4         |  in |   32|   ap_none  |      a_4     |    pointer   |
+|a_5         |  in |   32|   ap_none  |      a_5     |    pointer   |
+|a_6         |  in |   32|   ap_none  |      a_6     |    pointer   |
+|a_7         |  in |   32|   ap_none  |      a_7     |    pointer   |
+|b_0         |  in |   32|   ap_none  |      b_0     |    pointer   |
+|b_1         |  in |   32|   ap_none  |      b_1     |    pointer   |
+|b_2         |  in |   32|   ap_none  |      b_2     |    pointer   |
+|b_3         |  in |   32|   ap_none  |      b_3     |    pointer   |
+|b_4         |  in |   32|   ap_none  |      b_4     |    pointer   |
+|b_5         |  in |   32|   ap_none  |      b_5     |    pointer   |
+|b_6         |  in |   32|   ap_none  |      b_6     |    pointer   |
+|b_7         |  in |   32|   ap_none  |      b_7     |    pointer   |
+|c_0         | out |   32|   ap_vld   |      c_0     |    pointer   |
+|c_0_ap_vld  | out |    1|   ap_vld   |      c_0     |    pointer   |
+|c_1         | out |   32|   ap_vld   |      c_1     |    pointer   |
+|c_1_ap_vld  | out |    1|   ap_vld   |      c_1     |    pointer   |
+|c_2         | out |   32|   ap_vld   |      c_2     |    pointer   |
+|c_2_ap_vld  | out |    1|   ap_vld   |      c_2     |    pointer   |
+|c_3         | out |   32|   ap_vld   |      c_3     |    pointer   |
+|c_3_ap_vld  | out |    1|   ap_vld   |      c_3     |    pointer   |
+|c_4         | out |   32|   ap_vld   |      c_4     |    pointer   |
+|c_4_ap_vld  | out |    1|   ap_vld   |      c_4     |    pointer   |
+|c_5         | out |   32|   ap_vld   |      c_5     |    pointer   |
+|c_5_ap_vld  | out |    1|   ap_vld   |      c_5     |    pointer   |
+|c_6         | out |   32|   ap_vld   |      c_6     |    pointer   |
+|c_6_ap_vld  | out |    1|   ap_vld   |      c_6     |    pointer   |
+|c_7         | out |   32|   ap_vld   |      c_7     |    pointer   |
+|c_7_ap_vld  | out |    1|   ap_vld   |      c_7     |    pointer   |
++------------+-----+-----+------------+--------------+--------------+
+

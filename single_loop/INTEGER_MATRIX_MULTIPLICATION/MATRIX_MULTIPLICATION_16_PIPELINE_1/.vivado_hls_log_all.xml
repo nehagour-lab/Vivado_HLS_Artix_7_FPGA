@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<vivadoHLSLog:LogRoot xmlns:vivadoHLSLog="www.xilinx.com/vivadoHLSLog">
+  <errorLogs>
+    <logs>
+      <synLog/>
+      <simLog/>
+      <mgLog/>
+      <packageLog/>
+      <csimLog/>
+    </logs>
+  </errorLogs>
+  <warningLogs>
+    <logs>
+      <synLog>
+        <logs message="WARNING: [SCHED 204-68] Unable to enforce a carried dependence constraint (II = 1, distance = 1, offset = 1)&#xA;   between 'store' operation (../../../../../../home/drsatya/Desktop/lab1/mat_pipeline.cpp:19) of variable 'tmp_8', ../../../../../../home/drsatya/Desktop/lab1/mat_pipeline.cpp:19 on array 'res' and 'load' operation ('res_load', ../../../../../../home/drsatya/Desktop/lab1/mat_pipeline.cpp:19) on array 'res'." projectName="MATRIX_MULTIPLICATION_16_PIPELINE_1" solutionName="solution1" date="2018-03-16T10:00:21.102+0530" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-542] the outer loop is not a perfect loop." projectName="MATRIX_MULTIPLICATION_16_PIPELINE_1" solutionName="solution1" date="2018-03-16T10:00:20.798+0530" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-542] Cannot flatten a loop nest 'Col' (../../../../../../home/drsatya/Desktop/lab1/mat_pipeline.cpp:13:38) in function 'matrixmul' : " projectName="MATRIX_MULTIPLICATION_16_PIPELINE_1" solutionName="solution1" date="2018-03-16T10:00:20.793+0530" type="Warning"/>
+      </synLog>
+      <simLog/>
+      <mgLog/>
+      <packageLog>
+        <logs message="WARNING: [Synth 8-3936] Found unconnected internal register 'tmp_1_reg_307_reg' and it is trimmed from '5' to '4' bits. [/opt/Xilinx/Vivado_HLS/2017.2/bin/INTEGER_MATRIX_MULTIPLICATION/MATRIX_MULTIPLICATION_16_PIPELINE_1/solution1/impl/vhdl/matrixmul.vhd:287]" projectName="MATRIX_MULTIPLICATION_16_PIPELINE_1" solutionName="solution1" date="2018-03-16T10:01:28.638+0530" type="Warning"/>
+        <logs message="WARNING: [Synth 8-6014] Unused sequential element b_ce0_reg was removed.  [/opt/Xilinx/Vivado_HLS/2017.2/bin/INTEGER_MATRIX_MULTIPLICATION/MATRIX_MULTIPLICATION_16_PIPELINE_1/solution1/impl/vhdl/matrixmul.vhd:419]" projectName="MATRIX_MULTIPLICATION_16_PIPELINE_1" solutionName="solution1" date="2018-03-16T10:01:18.670+0530" type="Warning"/>
+        <logs message="WARNING: [Synth 8-6014] Unused sequential element ap_ready_reg was removed.  [/opt/Xilinx/Vivado_HLS/2017.2/bin/INTEGER_MATRIX_MULTIPLICATION/MATRIX_MULTIPLICATION_16_PIPELINE_1/solution1/impl/vhdl/matrixmul.vhd:408]" projectName="MATRIX_MULTIPLICATION_16_PIPELINE_1" solutionName="solution1" date="2018-03-16T10:01:18.648+0530" type="Warning"/>
+        <logs message="WARNING: [Synth 8-6014] Unused sequential element ap_idle_pp0_reg was removed.  [/opt/Xilinx/Vivado_HLS/2017.2/bin/INTEGER_MATRIX_MULTIPLICATION/MATRIX_MULTIPLICATION_16_PIPELINE_1/solution1/impl/vhdl/matrixmul.vhd:383]" projectName="MATRIX_MULTIPLICATION_16_PIPELINE_1" solutionName="solution1" date="2018-03-16T10:01:18.638+0530" type="Warning"/>
+        <logs message="WARNING: [Synth 8-5974] attribute &quot;use_dsp48&quot; has been deprecated, please use &quot;use_dsp&quot; instead " projectName="MATRIX_MULTIPLICATION_16_PIPELINE_1" solutionName="solution1" date="2018-03-16T10:01:18.635+0530" type="Warning"/>
+      </packageLog>
+      <csimLog/>
+    </logs>
+  </warningLogs>
+</vivadoHLSLog:LogRoot>
